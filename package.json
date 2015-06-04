@@ -1,0 +1,41 @@
+{
+  "name": "virtual-hrp-robot",
+  "version": "0.0.1",
+  "description": "Package that emulates a robot using the HID-Robot-Protocol (hrp)",
+  "main": "virtual-hrp-robot.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-mocha-test": "^0.12.7",
+    "hrp": "0.0.4",
+    "zmq": "^2.11.1"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "grunt": "^0.4.5",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "robotics",
+    "hrp",
+    "hid",
+    "usb",
+    "virtual"
+  ],
+  "author": "Andrés Manelli",
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andresmanelli/virtual-hrp-robot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andresmanelli/virtual-hrp-robot/issues"
+  },
+  "homepage": "https://github.com/andresmanelli/virtual-hrp-robot"
+}
