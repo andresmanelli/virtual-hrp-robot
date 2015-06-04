@@ -44,18 +44,26 @@ var VirtualRobot = function(robotName){
     
     var req = request.toString();  
     
+    // HRP-Compilance ACK frame
     if(req === HRPDefs.COMP_ACK()){
+      // Send ACK
       virtualRobot.send(HRPDefs.COMP_ACK());
+    // Robot information
     }else if(req === HRPDefs.ROBOT_INFO()){
       virtualRobot.send(robot.strInfo);
-    }else if(req.substr(0,HRPDefs.SET_EE_DIF_POS().length) === HRPDefs.SET_EE_DIF_POS()){
-      req = req.slice(HRPDefs.SET_EE_DIF_POS().length+1,req.length-1);
+    // EE Absolute Position. Not implemented
+    }else if(req.substr(0,HRPDefs.SET_EE_POS().length) === HRPDefs.SET_EE_POS()){
+
+    }
+    // EE Differential Position
+    else if(req.substr(0,HRPDefs.SET_EE_POS(null,true).length) === HRPDefs.SET_EE_POS(null,true)){
+      req = req.slice(HRPDefs.SET_EE_POS(null,true).length+1,req.length-1);
       var cmdVal = req.split(':');
       for(var i=0;i<cmdVal.length;i++){
         cmdVal[i] = parseFloat(cmdVal[i]);
       }
       virtualRobot.moveEE(cmdVal);
-      virtualRobot.send(HRPDefs.GENERAL_ACK());
+      virtualRobot.send(HRPDefs.GENERAL_ACK(HRPDefs.SET_EE_POS(null,true)));
     }else if(req === HRPDefs.GET_JOINTS()){
       virtualRobot.send(HRPDefs.joints2str(robot.joints));
     }
