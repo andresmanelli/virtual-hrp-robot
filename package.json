@@ -9,7 +9,7 @@
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-mocha-test": "^0.12.7",
-    "hrp": "0.0.4",
+    "hrp": "0.0.5",
     "zmq": "^2.11.1"
   },
   "devDependencies": {
