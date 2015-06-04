@@ -16,20 +16,16 @@ var VirtualRobot = function(robotName){
   if(typeof robotName === 'undefined' || robotName ===null)
     return false;
 
-  // Verify file
-  var fs = require('fs');
-  try{
-    fs.statSync('./robots/'+robotName+'.js');
-  }catch(e){
-    return false;
-  }
-
   var HRP = require('hrp');
   var HRPDefs = HRP(0,0,true); //Only definitions
   var zmq = require('zmq');
 
   // Open robot 
-  var robot = require('./robots/'+robotName+'.js');  
+  try{
+    var robot = require('virtual-hrp-robot/robots/'+robotName+'.js');  
+  }catch(e){
+    return false;
+  }
 
   // References to Kinematics
   var inverseK = robot.inverseK;
