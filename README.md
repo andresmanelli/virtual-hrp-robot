@@ -5,7 +5,9 @@ Package that emulates a robot using the HID-Robot-Protocol (hrp)
 ```npm install virtual-hrp-robot```
 
 ## Use
+```js
 var robot = require('virtual-hrp-robot')('robotName');
+```
 
 where _robotName_ is the name of the js file located in the folder ```robots/```.
 
