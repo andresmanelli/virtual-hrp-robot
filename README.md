@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/andresmanelli/virtual-hrp-robot.svg?branch=master)](https://travis-ci.org/andresmanelli/virtual-hrp-robot)
+
 # virtual-hrp-robot
 Package that emulates a robot using the HID-Robot-Protocol (hrp)
 
