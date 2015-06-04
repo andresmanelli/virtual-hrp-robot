@@ -1,6 +1,6 @@
 {
   "name": "virtual-hrp-robot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Package that emulates a robot using the HID-Robot-Protocol (hrp)",
   "main": "virtual-hrp-robot.js",
   "directories": {
