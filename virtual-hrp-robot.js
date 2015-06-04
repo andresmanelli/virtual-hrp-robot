@@ -39,6 +39,7 @@ var VirtualRobot = function(robotName){
   var virtualRobot = zmq.socket('rep');
 
   // Listener
+  // TODO: HRP compilance!
   virtualRobot.on('message', function(request) {
     
     var req = request.toString();  
