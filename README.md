@@ -44,6 +44,6 @@ The virtual robot will start listening for connections on the port 5555. You sho
 
 ## See also 
 
-[hrp-server](https://github.com/andresmanelli/hrp-server)
-[hrp-joy-driver](https://github.com/andresmanelli/hrp-joy-driver)
-[hrp](https://github.com/andresmanelli/hrp)
+- [hrp-server](https://github.com/andresmanelli/hrp-server)
+- [hrp-joy-driver](https://github.com/andresmanelli/hrp-joy-driver)
+- [hrp](https://github.com/andresmanelli/hrp)
