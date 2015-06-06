@@ -35,12 +35,12 @@ var VirtualRobot = function(robotName){
   var virtualRobot = zmq.socket('rep');
 
   // Listener
-  // TODO: HRP compilance!
+  // TODO: HRP compliance!
   virtualRobot.on('message', function(request) {
     
     var req = request.toString();  
     
-    // HRP-Compilance ACK frame
+    // HRP-Compliance ACK frame
     if(req === HRPDefs.COMP_ACK()){
       // Send ACK
       virtualRobot.send(HRPDefs.COMP_ACK());
@@ -74,9 +74,9 @@ var VirtualRobot = function(robotName){
     
     var newEEPos = {};
     
-    newEEPos[X] = robot.EEPos[X]+change[0];
-    newEEPos[Y] = robot.EEPos[Y]+change[1];
-    newEEPos[Z] = robot.EEPos[Z]+change[2];
+    newEEPos[robot.X] = robot.EEPos[robot.X]+change[0];
+    newEEPos[robot.Y] = robot.EEPos[robot.Y]+change[1];
+    newEEPos[robot.Z] = robot.EEPos[robot.Z]+change[2];
     
     if(!virtualRobot.updateJoints(newEEPos)){
       return false;
